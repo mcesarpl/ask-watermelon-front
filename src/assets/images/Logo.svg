@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-label="Ask Watermelon Logo">
+  <defs>
+    <clipPath id="melonClip">
+      <path d="M150 40C111 40 80 71 80 110C80 149 111 180 150 180C189 180 220 149 220 110C220 71 189 40 150 40Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Watermelon icon -->
+  <g transform="translate(0 0)">
+    <path d="M150 40C111 40 80 71 80 110C80 149 111 180 150 180C189 180 220 149 220 110C220 71 189 40 150 40Z"
+          fill="#52A350"/>
+
+    <path d="M150 52C117 52 91 78 91 110C91 142 117 168 150 168C183 168 209 142 209 110C209 78 183 52 150 52Z"
+          fill="#C257A4"/>
+
+    <g clip-path="url(#melonClip)" fill="#2F5C2D">
+      <ellipse cx="128" cy="90" rx="4" ry="7" transform="rotate(-20 128 90)"/>
+      <ellipse cx="155" cy="82" rx="4" ry="7" transform="rotate(10 155 82)"/>
+      <ellipse cx="178" cy="102" rx="4" ry="7" transform="rotate(-15 178 102)"/>
+      <ellipse cx="120" cy="125" rx="4" ry="7" transform="rotate(15 120 125)"/>
+      <ellipse cx="152" cy="118" rx="4" ry="7"/>
+      <ellipse cx="182" cy="132" rx="4" ry="7" transform="rotate(20 182 132)"/>
+    </g>
+
+    <!-- Ask bubble -->
+    <circle cx="205" cy="60" r="26" fill="#884074"/>
+    <path d="M195 81 L201 68 L214 74 Z" fill="#884074"/>
+
+    <path d="M196 60h18" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M205 51v18" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(270 0)">
+    <text x="0" y="105"
+          font-family="Cairo, Arial, sans-serif"
+          font-size="58"
+          font-weight="700"
+          fill="#332E32">
+      Ask
+    </text>
+
+    <text x="110" y="105"
+          font-family="Cairo, Arial, sans-serif"
+          font-size="58"
+          font-weight="700"
+          fill="#52A350">
+      Water
+    </text>
+
+    <text x="275" y="105"
+          font-family="Cairo, Arial, sans-serif"
+          font-size="58"
+          font-weight="700"
+          fill="#C257A4">
+      melon
+    </text>
+
+    <path d="M112 125H430"
+          stroke="#E9CCE1"
+          stroke-width="8"
+          stroke-linecap="round"/>
+  </g>
+</svg>
