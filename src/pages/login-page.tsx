@@ -3,10 +3,12 @@ import Logo from "../assets/images/Logo.svg?react";
 import Text from "../components/text";
 import InputText from "../components/input-text";
 import Button from "../components/button";
+import ChatBackGroundMesh from "../core-components/chat-background-mesh";
 
 export default function LoginPage() {
   return(
     <div className="flex min-h-screen">
+      <ChatBackGroundMesh opacity={6}/>
       <div className="hidden md:flex md:w-1/2 bg-green-light items-center justify-center">
         <Logo className="h-24" />
       </div>
