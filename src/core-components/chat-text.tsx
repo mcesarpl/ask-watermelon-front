@@ -2,6 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import React from "react"
 import Card from "../components/card";
 import Text from "../components/text";
+import Markdown from "../components/markdown";
 
 
 const chatTextVariants = cva(`
@@ -20,18 +21,30 @@ const chatTextVariants = cva(`
 )
 
 interface ChatTextProps extends VariantProps<typeof chatTextVariants>,
-  React.ComponentProps<"div"> {}
+  React.ComponentProps<"div"> {
+    isModel: boolean
+  }
 
-export default function ChatText({ children, emitter, ...props }: ChatTextProps) {
+export default function ChatText({ children, emitter, isModel, ...props }: ChatTextProps) {
   return(
     <Card
       className={chatTextVariants({ emitter })}
-      rounded="full"
+      rounded="xl"
       {...props}
     >
-      <Text variant="body-sm-bold">
-        {children}
-      </Text>
+      {
+        isModel ?
+        <Markdown>
+          {String(children)}
+        </Markdown>
+        :
+        <Text 
+          variant="body-sm-bold"
+          className="whitespace-pre-wrap break-words"
+        >
+          {children}
+        </Text>
+      }
     </Card>
   )
 }

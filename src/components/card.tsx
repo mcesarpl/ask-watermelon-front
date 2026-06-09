@@ -3,7 +3,7 @@ import React from "react"
 
 const cardVariants = cva(`
     border border-solid border-gray-200
-    bg-white shadow-sm`,{
+    bg-white shadow-sm break-words`,{
     variants: {
       size: {
         none: "",
@@ -11,6 +11,7 @@ const cardVariants = cva(`
       },
       rounded: {
         lg: "rounded-lg",
+        xl: "rounded-3xl",
         full: "rounded-full"
       }
     },
