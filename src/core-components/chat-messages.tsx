@@ -88,11 +88,11 @@ export default function ChatMessages({ messages, userId, handleSendMessages, cha
         {/* Input */}
         <div className="shrink-0 border-t border-gray-200 p-4">
           <Container>
-            <Card className="flex items-center gap-4 p-4">
+            <Card className="flex items-center gap-4 p-4 rounded-full!">
 
               <InputText
                 className="flex-1 border-none"
-                placeholder="Digite sua mensagem..."
+                placeholder="Type your message..."
                 onChange={handleInputText}
                 onKeyDown={handleInputKeyDown}
                 value={inputText}

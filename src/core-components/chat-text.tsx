@@ -11,7 +11,7 @@ const chatTextVariants = cva(`
     variants: {
       emitter: {
         primary: "self-end max-w-2xl p-4",
-        secondary: "self-start max-w-2xl p-4 bg-pink-light!"
+        secondary: "self-start max-w-2xl p-4 bg-green-light!"
       },
     },
     defaultVariants: {
