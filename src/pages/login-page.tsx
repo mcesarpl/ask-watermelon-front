@@ -33,8 +33,8 @@ export default function LoginPage() {
       await loginRequest({ email, password })
 
       navigate("/chat")
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      console.log(error)
       setError("Invalid e-mail or password")
     }
 
