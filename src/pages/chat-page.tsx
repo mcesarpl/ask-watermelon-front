@@ -124,9 +124,11 @@ export default function ChatPage() {
                 relative
                 h-full
                 w-64
-                bg-green-light
+                bg-gray-100/55
+                backdrop-blur-md
                 border-r
                 border-gray-200
+                shadow-xl
               "
             >
               <ChatBackGroundMesh />
@@ -155,7 +157,13 @@ export default function ChatPage() {
         )}
 
         {/* Sidebar Desktop */}
-        <div className="hidden md:block w-64 bg-green-light border-r border-gray-200">
+        <div className="
+          hidden md:block w-64 
+        bg-gray-100/55
+          border-r 
+          border-gray-200
+          shadow-xl
+        ">
           <ChatSideBar
             chats={userChats}
             onSelectChat={handleSelectChat}
