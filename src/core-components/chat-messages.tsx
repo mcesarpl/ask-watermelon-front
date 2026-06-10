@@ -11,10 +11,11 @@ import React from "react";
 interface ChatMessagesProps {
   messages: Message[],
   userId: string,
+  chatId: string,
   handleSendMessages: (message: Message) => Promise<void>
 }
 
-export default function ChatMessages({ messages, userId, handleSendMessages }: ChatMessagesProps) {
+export default function ChatMessages({ messages, userId, handleSendMessages, chatId }: ChatMessagesProps) {
   const [inputText, setInputText] = React.useState('')
   const [handling, setHandling] = React.useState(false)
 
@@ -43,7 +44,7 @@ export default function ChatMessages({ messages, userId, handleSendMessages }: C
     await handleSendMessages({
       content: inputText,
       userId,
-      chatId: "f31a3a79-6611-465b-b223-2e97596efb13"
+      chatId
     })
 
     setHandling(false)

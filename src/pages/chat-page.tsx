@@ -169,6 +169,7 @@ export default function ChatPage() {
             messages={chatMessages}
             userId={userId}
             handleSendMessages={handleSendMessages}
+            chatId={selectedChat}
           />
         </div>
 
