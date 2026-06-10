@@ -129,6 +129,7 @@ export default function ChatPage() {
                 border-gray-200
               "
             >
+              <ChatBackGroundMesh />
               <button
                 className="
                   absolute
