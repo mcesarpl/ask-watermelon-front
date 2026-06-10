@@ -1,5 +1,4 @@
 import Text from "../components/text";
-import Card from "../components/card";
 import Container from "../components/container";
 import ChatRecent from "./chat-recent";
 import Logo from "../assets/images/Logo.svg?react"
@@ -8,6 +7,9 @@ import ButtonIcon from "../components/button-icon";
 import PlusIcon from "../assets/icons/Plus-Regular.svg?react"
 import React from "react";
 import { useNavigate } from "react-router"
+import Button from "../components/button";
+import LibraryIcon from "../assets/icons/Library-Icon.svg?react"
+import IntelligenceIcon from "../assets/icons/Intelligence-Icon.svg?react"
 
 interface ChatSideBarProps {
   chats: Chat[]
@@ -37,16 +39,18 @@ export default function ChatSideBar({
 
       <Logo className="h-24" />
 
-      <Card className="p-3 cursor-pointer hover:bg-pink-light transition">
-        <Text variant="body-sm-bold">Models</Text>
-      </Card>
+      <Button 
+        icon={IntelligenceIcon}
+      >
+        Models
+      </Button>
 
-      <Card 
-        className="p-3 cursor-pointer hover:bg-pink-light transition"
+      <Button 
+        icon={LibraryIcon}
         onClick={() => navigate("/documents")}
       >
-        <Text variant="body-sm-bold">Documents</Text>
-      </Card>
+        Documents
+      </Button>
 
       <div className="flex items-center justify-between mt-4">
         <Text

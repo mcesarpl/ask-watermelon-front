@@ -40,7 +40,7 @@ export default function DocumentsList() {
     <>
       <div 
         className="flex items-center w-fit gap-4 cursor-pointer hover:bg-pink-light transition rounded p-4"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/chat")}
       >
         <ButtonIcon
           icon={IconArrowBack}

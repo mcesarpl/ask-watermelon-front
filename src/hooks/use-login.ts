@@ -23,10 +23,19 @@ export default function useLogin() {
     setAccessToken(accessToken)
   }
 
+  function isUserLogged(): boolean {
+    if(!accessToken || accessToken.length === 0) {
+      return false
+    }
+
+    return true
+  }
+
   return {
     userId,
     loginRequest,
     accessToken,
-    loginCredentials
+    loginCredentials,
+    isUserLogged
   }
 }
