@@ -64,8 +64,6 @@ export default function ChatPage() {
   }
 
   const handleDeleteChat = async (id: string) => {
-    console.log({"chatDeleted": id})
-
     await deleteAllChat(id)
     await fetchChats()
   }
