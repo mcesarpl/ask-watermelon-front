@@ -8,8 +8,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<LoginPage />}/>
-        <Route index element={<ChatPage />}/>
+        <Route index element={<LoginPage />}/>
+        <Route index path="/login" element={<LoginPage />}/>
+        <Route path="/chat" element={<ChatPage />}/>
         <Route path="/components" element={<PageComponents />}/>
         <Route path="/documents" element={<DocumentsPage />}/>
       </Routes>

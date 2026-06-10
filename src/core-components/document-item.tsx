@@ -5,6 +5,8 @@ import TrashIcon from "../assets/icons/Trash-Regular.svg?react"
 import { type Document } from "../models/documents";
 import Skeleton from "../components/skeleton";
 import React from "react";
+import Icon from "../components/icon";
+import ArticleIcon from "../assets/icons/Article-Icon.svg?react"
 
 
 interface DocumentItemProps {
@@ -28,6 +30,10 @@ export default function DocumentItem({ document, loading, deleteDocument,  }: Do
   return (
     <Card size="md">
       <div className="flex items-center gap-4">
+          <Icon
+            svg={ArticleIcon}
+            className="w-4 fill-gray-300"
+          />
           {!loading ? (
             <Text 
               className="flex-1"

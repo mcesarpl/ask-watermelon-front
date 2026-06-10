@@ -7,9 +7,10 @@ import ChatBackGroundMesh from "../core-components/chat-background-mesh";
 import useLogin from "../hooks/use-login";
 import useChat from "../hooks/use-chat";
 import type { Message } from "../models/messages";
+import { useNavigate } from "react-router";
 
 export default function ChatPage() {
-  const { userId } = useLogin()
+  const { userId, isUserLogged } = useLogin()
   const [ isSidebarOpen, setIsSidebarOpen ] = React.useState(false)
   const [ selectedChat, setSelectedChat ] = React.useState('')
   const [ isNewChat, setIsNewChat ] = React.useState(false)
@@ -23,6 +24,14 @@ export default function ChatPage() {
     createChat,
     deleteAllChat
   } = useChat()
+
+  const navigate = useNavigate()
+
+  const handleIsUserLogged = () => {
+    if(!isUserLogged()) {
+      navigate("/login")
+    }
+  }
 
   const handleFetchMessages = async () => {
     const chats = await fetchChats()
@@ -96,6 +105,7 @@ export default function ChatPage() {
   React.useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     handleFetchMessages()
+    handleIsUserLogged()
   }, [])
   
   return (

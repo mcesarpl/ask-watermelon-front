@@ -32,7 +32,7 @@ export default function LoginPage() {
     try {
       await loginRequest({ email, password })
 
-      navigate("/")
+      navigate("/chat")
     } catch (error) {
       console.log(error)
       setError("Invalid e-mail or password")
